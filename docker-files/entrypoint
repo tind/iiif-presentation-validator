@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+export PYTHONPATH=/opt/venv/lib/python3.13/site-packages:"${PYTHONPATH:-}":/usr/lib/python3/dist-packages
+
+exec /opt/venv/bin/python3 iiif-presentation-validator.py "$@"
