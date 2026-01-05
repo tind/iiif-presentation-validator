@@ -45,4 +45,4 @@ USER appuser
 
 ENTRYPOINT ["/app/docker-files/entrypoint"]
 
-CMD ["--hostname", "0.0.0.0"]
+CMD ["--hostname", "0.0.0.0", "--port", "8000"]

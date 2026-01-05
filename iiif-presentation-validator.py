@@ -9,7 +9,7 @@ import os
 from gzip import GzipFile
 from io import BytesIO
 from jsonschema.exceptions import ValidationError, SchemaError
-import traceback    
+import traceback
 
 try:
     # python3
@@ -94,7 +94,7 @@ class Validator(object):
                         'url': url,
                         'warnings': []
                     }
-            except Exception as e:    
+            except Exception as e:
                 traceback.print_exc()
                 infojson = {
                     'okay': 0,
@@ -113,7 +113,7 @@ class Validator(object):
                     raise ValidationError("Manifest @id ({}) is different to the location where it was retrieved ({})".format(mf.id, url))
                 # Passed!
                 okay = 1
-            except KeyError as e:    
+            except KeyError as e:
                 print ('Failed validation due to:')
                 traceback.print_exc()
                 err = 'Failed due to KeyError {}, check trace for details'.format(e)
@@ -246,7 +246,7 @@ def main():
 
     parser.add_argument('--hostname', default='localhost',
                         help='Hostname or IP address to bind to (use 0.0.0.0 for all)')
-    parser.add_argument('--port', default=8080, type=int,
+    parser.add_argument('--port', default=8000, type=int,
                         help='Server port to bind to. Values below 1024 require root privileges.')
 
     args = parser.parse_args()
