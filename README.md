@@ -42,7 +42,7 @@ python setup.py install
 python iiif-presentation-validator.py
 ```
 
-This should start up a local server, running at <localhost:8080>. To test it, try [this url](http://localhost:8080/validate?url=http://iiif.io/api/presentation/2.1/example/fixtures/1/manifest.json) and see if you get a JSON response that looks like this:
+This should start up a local server, running at <localhost:8000>. To test it, try [this url](http://localhost:8000/validate?url=http://iiif.io/api/presentation/2.1/example/fixtures/1/manifest.json) and see if you get a JSON response that looks like this:
 
 ```json
 {
